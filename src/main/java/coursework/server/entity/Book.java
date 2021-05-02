@@ -41,9 +41,4 @@ public class Book {
             inverseJoinColumns = @JoinColumn(name = "publisher_id", nullable = false)
     )
     private List<Publisher> publisherList = new ArrayList<>();
-
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "section_id")
-    private Section section;
-
 }
